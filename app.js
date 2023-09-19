@@ -13,7 +13,7 @@ const app = Vue.createApp({
           title: 'The Lord of the Ears',
           author: 'Pooja Uke',
           img: 'assets/2.jpg',
-          isFav: false
+          isFav: true
         },
         {
           title: 'The Lord of the Mouth',
@@ -33,6 +33,12 @@ const app = Vue.createApp({
     },
     toggleFavBook(book) {
       book.isFav = !book.isFav;
+    }
+  },
+
+  computed: {
+    filteredBooks() {
+      return this.books.filter(book => book.isFav;
     }
   }
 });
