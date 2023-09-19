@@ -5,15 +5,18 @@ const app = Vue.createApp({
       books: [
         {
           title: 'The Lord of the Rings',
-          author: 'Vedant Gonnade'
+          author: 'Vedant Gonnade',
+          img: 'assets/1.jpg',
         },
         {
           title: 'The Lord of the Ears',
-          author: 'Pooja Uke'
+          author: 'Pooja Uke',
+          img: 'assets/2.jpg',
         },
         {
           title: 'The Lord of the Mouth',
-          author: 'Bilal Baig'
+          author: 'Bilal Baig',
+          img: 'assets/3.jpg',
         }
       ]
     }
