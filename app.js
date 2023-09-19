@@ -7,16 +7,19 @@ const app = Vue.createApp({
           title: 'The Lord of the Rings',
           author: 'Vedant Gonnade',
           img: 'assets/1.jpg',
+          isFav: true
         },
         {
           title: 'The Lord of the Ears',
           author: 'Pooja Uke',
           img: 'assets/2.jpg',
+          isFav: false
         },
         {
           title: 'The Lord of the Mouth',
           author: 'Bilal Baig',
           img: 'assets/3.jpg',
+          isFav: true
         }
       ]
     }
@@ -27,6 +30,9 @@ const app = Vue.createApp({
     },
     handleEvent(event, data) {
       console.log(event, event.type, data);
+    },
+    toggleFavBook(book) {
+      book.isFav = !book.isFav;
     }
   }
 });
