@@ -5,3 +5,7 @@ body {
 p {
   font-style: italic;
 }
+
+button {
+  margin: 10px;
+}

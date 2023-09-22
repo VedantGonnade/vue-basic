@@ -6,11 +6,20 @@
       <template v-slot:links>
         <a href="#">sign up now</a>
       </template>
-      <h1>Ninja Givaway!!</h1>
-      <p>Grab your ninja swag for half price!!</p>
+      <h1>First Modal</h1>
     </Modal>
   </div>
+
+  <div v-if="showSecondModel">
+    <Modal theme="sale" @closeModal="toggleSecondModal">
+      <template v-slot:links>
+        <a href="#">sign up now</a>
+      </template>
+      <h1>Second Modal</h1>
+    </Modal>
+  </div> 
   <button @click="toggleModal">open modal</button>
+  <button @click="toggleSecondModal">second modal</button>
 </template>
 
 <script>
@@ -24,14 +33,16 @@ export default {
   data() {
     return {
       title: 'my First Vue app',
-      header: "Signup for a giveaway",
-      text: "grab your goodies!!",
-      showModel: false
+      showModel: false,
+      showSecondModel: false
     }
   },
   methods: {
     toggleModal() {
       this.showModel = !this.showModel
+    },
+    toggleSecondModal() {
+      this.showSecondModel =!this.showSecondModel
     }
   }
 }
